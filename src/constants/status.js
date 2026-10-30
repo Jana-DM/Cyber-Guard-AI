@@ -1,0 +1,37 @@
+// Pipeline stage execution status
+export const STAGE_STATUS = {
+  PENDING: 'PENDING',
+  RUNNING: 'RUNNING',
+  SUCCESS: 'SUCCESS',
+  FAILED: 'FAILED',
+  SKIPPED: 'SKIPPED',
+};
+
+// Vulnerability lifecycle state machine
+export const VULN_STATE = {
+  DETECTED: 'DETECTED',
+  VALIDATED: 'VALIDATED',
+  FIX_PROPOSED: 'FIX_PROPOSED',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+  FIX_APPLIED: 'FIX_APPLIED',
+  RESCAN: 'RESCAN',
+  VERIFIED: 'VERIFIED',
+  TEST_FAILED: 'TEST_FAILED',
+  UNRESOLVED: 'UNRESOLVED',
+};
+
+// Ordered for rendering timelines left-to-right
+export const VULN_STATE_ORDER = [
+  VULN_STATE.DETECTED,
+  VULN_STATE.VALIDATED,
+  VULN_STATE.FIX_PROPOSED,
+  VULN_STATE.APPROVED,
+  VULN_STATE.FIX_APPLIED,
+  VULN_STATE.RESCAN,
+  VULN_STATE.VERIFIED,
+];
+
+export const CANDIDATE_STATUS = {
+  REJECTED_CANDIDATE: 'REJECTED_CANDIDATE', // failed validation, never became a tracked vuln
+};
